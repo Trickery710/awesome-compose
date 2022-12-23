@@ -1,0 +1,4 @@
+docker run \
+  -v /home/casey/projects/docker/grafana/tmp:/etc/agent/data \
+  -v /path/to/config.yaml:/etc/agent/agent.yaml \
+  grafana/agent:v0.30.0

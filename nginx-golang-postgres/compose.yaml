@@ -3,8 +3,7 @@ services:
     build:
       context: backend
       target: builder
-    secrets:
-      - db-password
+    
     depends_on:
       db:
         condition: service_healthy
@@ -25,7 +24,7 @@ services:
     healthcheck:
       test: [ "CMD", "pg_isready" ]
       interval: 10s
-      timeout: 5s
+      timeout: 10s
       retries: 5
 
   proxy:
@@ -45,4 +44,4 @@ volumes:
 
 secrets:
   db-password:
-    file: db/password.txt
+    file: db-data:/password.txt

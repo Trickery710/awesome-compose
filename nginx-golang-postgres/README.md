@@ -74,7 +74,7 @@ $ docker compose ps
 NAME                              COMMAND                  SERVICE             STATUS              PORTS
 nginx-golang-postgres-backend-1   "/code/bin/backend"      backend             running
 nginx-golang-postgres-db-1        "docker-entrypoint.s…"   db                  running (healthy)   5432/tcp
-nginx-golang-postgres-proxy-1     "/docker-entrypoint.…"   proxy               running             0.0.0.0:80->80/tcp
+nginx-golang-postgres-proxy-1     "/docker-entrypoint.…"   proxy               running             0.0.0.0:80->7080/tcp
 ```
 
 After the application starts, navigate to `http://localhost:80` in your web browser or run:
