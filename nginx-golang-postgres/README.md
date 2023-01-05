@@ -43,7 +43,7 @@ services:
         target: /etc/nginx/conf.d/default.conf
         read_only: true
     ports:
-      - 80:80
+      - 8080:80
     ...
 ```
 The compose file defines an application with three services `proxy`, `backend` and `db`.
